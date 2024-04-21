@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_width" xsi:type="number">50</argument>
+                <argument name="logo_height" xsi:type="number">50</argument>
+                <argument name="logo_alt" xsi:type="string">logo</argument>
+            </arguments>
+        </referenceBlock>
+<!-- додавання до футеру колонки з лого та інформацію компанії -->
+<referenceContainer name="footer">
+    <container name="custom.footer.container" htmlTag='div' htmlClass='custom_footer'>
+        <block name='custom.footer.block' template='Magento_Theme::html/custom_block_footer.phtml' /> 
+    </container>
+</referenceContainer>
+
+<move element='footer_links' destination='custom.footer.container' before='-' />
+<move element='form.subscribe' destination='custom.footer.container' after='custom.footer.block'/>
+<move element='custom.footer.container' destination='footer' before='copyright' />
+
+<!-- додавання колонки в файл логін з переліком правил та обов`язків  -->
+
+<referenceContainer name='customer.login.container'>
+    <container name='custom.login.container' htmlTag='div' htmlClass='login_rules' after='-'>
+     <block name='custom.login.rules' template='Magento_Theme::html/custom_rules_login.phtml' />
+    </container>
+</referenceContainer>
+
+    </body>
+</page>
+
+
