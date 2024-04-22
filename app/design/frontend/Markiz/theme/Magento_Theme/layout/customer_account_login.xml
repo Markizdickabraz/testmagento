@@ -2,7 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_con
 figuration.xsd">
-<body>
-<referenceBlock name="customer.new" remove="true"/>
-</body>
+
+    <body>
+        <referenceBlock name="customer.new" remove="true"/>
+    </body>
+    
 </page>
