@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name='custom.contact.container' htmlTag='h2' htmlClass='custom_contact-container'>
+                <block name="custom.block" template="Magento_Contact::custom_contactUs_template.phtml">
+                    <arguments>
+                        <argument name="custom_data" xsi:type="string">Custom text contact us</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element='custom.contact.container' destination='content' before='-' />
+        
+    </body>
+</page>
