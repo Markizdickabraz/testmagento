@@ -4,6 +4,13 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_con
 figuration.xsd">
 
     <body>
+
+        <referenceContainer name='customer.login.container'>
+            <container name='custom.login.container' htmlTag='div' htmlClass='login_rules' after='-'>
+            <block name='custom.login.rules' template='Magento_Theme::html/custom_rules_login.phtml' />
+            </container>
+        </referenceContainer>
+
         <referenceBlock name="customer.new" remove="true"/>
     </body>
     
