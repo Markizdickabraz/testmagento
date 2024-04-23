@@ -10,17 +10,15 @@
             </arguments>
         </referenceBlock>
 
-        <referenceContainer name="content">
-            <container name="custom.container.start" htmlTag='div' htmlClass='sustom_start'>
-                <container name="custom.container.start.left" htmlTag='div' htmlClass=''>
+        <!-- <referenceContainer name="content">
+            <container name="custom.container.start" htmlTag='div' htmlClass='sustom_start' >
+                <container name="custom.container.start.left" htmlTag='div' htmlClass='custom_start-left'>
                     <block name="custom.block.start.left" template="Magento_Theme::custom_start_left.phtml"></block>
                 </container>
-                <container name="custom.container.start.right" htmlTag='div' htmlClass='sustom_start-right'>
+                <container name="custom.container.start.right" htmlTag='div' htmlClass='custom_start-right'>
                     <block name="custom.block.start.right" template="Magento_Theme::custom_start_right.phtml"></block>
                 </container>
             </container>
-        </referenceContainer>
+        </referenceContainer> -->
     </body>
 </page>
-
-
