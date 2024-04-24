@@ -10,15 +10,18 @@
             </arguments>
         </referenceBlock>
 
-        <!-- <referenceContainer name="content">
-            <container name="custom.container.start" htmlTag='div' htmlClass='sustom_start' >
-                <container name="custom.container.start.left" htmlTag='div' htmlClass='custom_start-left'>
-                    <block name="custom.block.start.left" template="Magento_Theme::custom_start_left.phtml"></block>
-                </container>
-                <container name="custom.container.start.right" htmlTag='div' htmlClass='custom_start-right'>
-                    <block name="custom.block.start.right" template="Magento_Theme::custom_start_right.phtml"></block>
-                </container>
+        <move element='top.search' destination='header.panel' before='-' />
+
+        <referenceContainer name="footer">
+            <container name="custom.footer.container" htmlTag='div' htmlClass='custom_footer' before='copyright'>
+                <block name='custom.footer.block' template='Magento_Theme::html/custom_block_footer.phtml' /> 
             </container>
-        </referenceContainer> -->
+        </referenceContainer>
+
+        <move element='footer_links' destination='custom.footer.container' before='-' />
+        <move element='form.subscribe' destination='custom.footer.container' after='custom.footer.block'/>
+
+        <move element='minicart' destination='header.panel' before='top.search' />
+        
     </body>
 </page>
