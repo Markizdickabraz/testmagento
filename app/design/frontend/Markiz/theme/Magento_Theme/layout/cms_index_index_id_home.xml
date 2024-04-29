@@ -2,17 +2,35 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-       
 
         <referenceContainer name="content">
-            <container name="custom.container.start" htmlTag='div' htmlClass='sustom_start' >
-                <container name="custom.container.start.left" htmlTag='div' htmlClass='custom_start-left'>
-                    <block name="custom.block.start.left" template="Magento_Theme::custom_start_left.phtml"></block>
+            <container name="custom.container.start.first" htmlTag='div' htmlClass='custom_start' >
+                <container name="custom.container.start.first.left" htmlTag='div' htmlClass='custom_start-left'>
+                    <block name="custom.block.start.first.left" template="Magento_Theme::custom_start_left.phtml"></block>
                 </container>
-                <container name="custom.container.start.right" htmlTag='div' htmlClass='custom_start-right'>
-                    <block name="custom.block.start.right" template="Magento_Theme::custom_start_right.phtml"></block>
+                <container name="custom.container.start.first.right" htmlTag='div' htmlClass='custom_start-right'>
+                    <block name="custom.block.start.first.right" template="Magento_Theme::custom_start_right.phtml">
+                        <block class="Magento\Cms\Block\Block" name="custom.slider.block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">custom_slider_block</argument>
+                            </arguments>
+                        </block>
+                    </block>
                 </container>
             </container>
         </referenceContainer>
+
+<!--        <referenceContainer name="div.sidebar.additional">-->
+                <block name="custom.right.block" template="Magento_Theme::custom_right_block.phtml">
+                    <block class="Magento\Cms\Block\Block" name="custom.right.block.cms">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">custom_right_block</argument>
+                        </arguments>
+                    </block>
+                </block>
+<!--        </referenceContainer>-->
+
+        <move element="custom.right.block" destination="div.sidebar.additional" before="-" />
+
     </body>
 </page>
