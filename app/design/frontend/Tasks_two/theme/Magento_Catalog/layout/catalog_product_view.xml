@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="custom.product.container" htmlTag="div" htmlClass="new_product-block" before="-">
+                <block name="custom.product.block" template="Magento_Catalog::custom_prod.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <move element="page.main.title" destination="custom.product.block" before="-" />
+        <move element="product.info.stock.sku" destination="custom.product.block" before="-" />
+        <move element="product.info.main" destination="content" before="-" />
+    </body>
+</page>
