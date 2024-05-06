@@ -5,6 +5,13 @@
         <referenceContainer name="content">
             <container name="custom.product.container" htmlTag="div" htmlClass="new_product-block" before="-">
                 <block name="custom.product.block" template="Magento_Catalog::custom_prod.phtml"/>
+                <block name="product.tabs.block" template="Magento_Theme::custom_tabs.phtml" >
+                    <block class="Magento\Cms\Block\Block" name="custom.slider.block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">custom_slider_block</argument>
+                        </arguments>
+                    </block>
+                </block>
             </container>
         </referenceContainer>
 

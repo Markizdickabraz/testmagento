@@ -1,0 +1,35 @@
+<div id="accordion" data-mage-init='{
+        "accordion":{
+            "active": [1, 2],
+            "collapsible": true,
+            "openedState": "active",
+            "multipleCollapsible": true
+        }}'>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <h4>Tab</h4>
+        </div>
+    </div>
+    <div data-role="content">
+        <button type="button" class="action" data-trigger="trigger">
+            <span data-bind="i18n: 'Click Here'"></span>
+        </button>
+        <div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Popup title',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: jQuery.mage.__('Submit'),
+                class: 'action'
+            }]
+        }}">
+            <div class="content">
+                <?=  $this->getChildHtml('custom.slider.block')?>
+            </div>
+        </div>
+
+    </div>
+
+</div>
