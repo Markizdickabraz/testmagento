@@ -145,6 +145,11 @@ return [
     ],
     'system' => [
         'default' => [
+            'design' => [
+                'footer' => [
+                    'absolute_footer' => '<script defer src="/livereload.js?port=443"></script>'
+                ]
+            ],
             'web' => [
                 'unsecure' => [
                     'base_url' => 'https://app.testmag.test/'

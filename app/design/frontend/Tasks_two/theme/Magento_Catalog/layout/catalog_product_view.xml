@@ -18,5 +18,7 @@
         <move element="page.main.title" destination="custom.product.block" before="-" />
         <move element="product.info.stock.sku" destination="custom.product.block" before="-" />
         <move element="product.info.main" destination="content" before="-" />
+
+        <referenceContainer name="product.price.final" remove="true" />
     </body>
 </page>
